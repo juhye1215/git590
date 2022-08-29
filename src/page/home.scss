@@ -1,0 +1,63 @@
+@import "../variable.scss";
+
+.poster-img{
+    img{
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        min-height: 35rem;
+        object-fit: fill;
+    }
+
+}
+
+.poster-overlay{
+    color: white;
+    position: absolute;
+    padding: calc($base-padding*10) calc($base-padding*6);
+    bottom: 0;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+    opacity: 1;
+    transform: opacity 0.5s;
+    &:hover{
+        opacity: 1;
+    }
+    .poster_title{
+        font-weight: 900;
+        font-size: 4rem;
+        margin-bottom: calc($base-padding*5);
+        text-align: left;
+        @include breakpoint (small){
+                text-align: center;
+        }
+
+    }
+    .poster_runtime{
+        font-size: $font-size-xlarge;
+        margin-bottom: calc($base-padding*2);
+        text-align: left;
+        @include breakpoint (small){
+            text-align: center;
+    }
+
+ }
+    .poster_description{
+        font-size: $font-size-regular;
+        margin-bottom: calc($base-padding*2);
+        display: flex;
+        text-align: left;
+        width: 60%;
+        font-family: $regular-font;
+        @include breakpoint (small){
+            width: 100%;
+    }
+
+    }
+
+} 

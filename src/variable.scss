@@ -1,0 +1,73 @@
+/**Fonts*/
+@font-face {
+    font-family: 'Oswald', sans-serif;
+    font-display: block;
+    src: url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+    font-style: normal;
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: 'Work Sans', sans-serif;
+    font-display: block;
+    src:url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+    font-style: normal;
+    font-display: swap
+  }
+  
+
+$font-white: #ffffff;
+$font-black:#252525;
+$title-font: 'Oswald', sans-serif;
+$regular-font:'Work Sans', sans-serif;
+
+$font-size-small:0.75rem;
+$font-size-regular:1rem;
+$font-size-large:1.25rem;
+$font-size-xlarge:1.5rem;
+
+$base-padding: 0.25rem;
+$base-margin: 0.25rem;
+
+
+/* Breakpoints */ 
+$xx-small:414px;
+$x-small:567px;
+$small:807px;
+$medium:1199px;
+$large:1919px;
+$x-large:1920px;
+
+@mixin breakpoint($grid) {
+    @if $grid == "xx-small" {
+      @media only screen and (max-width: $xx-small){
+        @content;
+      }
+    }
+    @else if $grid == "x-small" {
+      @media only screen and (max-width: $x-small) {
+        @content;
+      }
+    }
+    @else if $grid == "small" {
+      @media only screen and (max-width: $small) {
+        @content;
+      }
+    }
+    @else if $grid == "medium" {
+        @media only screen and (max-width: $medium){
+        @content;
+      }
+    }
+    @else if $grid == "large" {
+        @media only screen and (max-width: $large) {
+        @content;
+      }
+    }
+    @else if $grid == "x-large" {
+      @media only screen and (min-width: $x-large) { 
+          @content; 
+      }
+    }
+  }
+

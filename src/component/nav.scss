@@ -1,0 +1,60 @@
+@import "../variable.scss";
+
+.nav{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 30px;
+    padding: 20px 1.25rem;
+    z-index: 1;
+    font-family: $title-font;
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    transition-timing-function:ease-in ;
+    transition:all 0.5s;
+
+    .nav-left{
+        display: flex;
+     
+        a{
+            text-decoration: none;
+            color: white;
+            align-items: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            padding: 0 2rem;
+            &:hover{
+                color: #D81F26;
+            }
+        }
+        .logo{
+            padding: 0 !important;
+            margin-right: 1.5rem;
+            box-sizing: border-box;
+            max-width: 120px;
+
+            img{
+                width: 100%;
+                object-fit:contain;
+                vertical-align: middle;
+            }
+        }
+    }
+  
+    .avatar{
+        padding: 0 2rem;
+        max-width: 30px;
+        vertical-align: middle;
+        object-fit: contain;
+        justify-content: end;
+    }
+}
+
+.nav_black{
+    background-color: black;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.74);
+
+}
+
