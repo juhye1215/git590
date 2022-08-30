@@ -3,7 +3,6 @@
 
 .cards_link{
     text-decoration: none;
-    color: white;
 
 .cards {
     display: inline-block;
@@ -11,12 +10,12 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    margin: rem;
+    margin: calc($base-margin*2);
     cursor:pointer;
     min-width:200px;
     height:300px;
     z-index:0;
-    border: 1px solid rgb(99, 99, 99);
+    box-sizing: border-box;
     img{
         height: 300px;
     }
@@ -32,7 +31,7 @@
         height: 290px;
         display: flex;
         flex-direction: column;
-        width: 85%;
+        width: 100%;
         justify-content: flex-end;
         background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
         opacity: 0;
@@ -42,22 +41,17 @@
         }
     }   
     .title {
-        font-weight: 900;
-        font-size: 1rem;
-        margin-bottom: 0.4rem;
+        color: $font-white;
+        font-weight: 700;
+        font-size: $font-size-regular;
     }
     
     .runtime {
-        font-size: .75rem;
-        margin-bottom: 0.25rem;
+        color: grey;
+        font-size: $font-size-small;
+        margin-bottom: $base-padding;
     }
     
-    .description {
-        font-style: italic;
-        font-size: .75rem;
-        margin-bottom: 0.25rem;
-    }
-
 
 }
 

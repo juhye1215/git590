@@ -30,7 +30,7 @@ function MovieList() {
             <div className="list__cards">
                 {
                     movieList.map((movie,i )=> (
-                        <Card key={i} movie={movie} />
+                        <Card key={i} movie={movie}/>
                     ))
                 }
             </div>

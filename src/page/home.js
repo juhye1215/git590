@@ -4,11 +4,6 @@ import { Carousel } from 'react-responsive-carousel';
 /**component */
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import "./home.scss";
-import MovieList from '../component/movieList';
-import Banner from '../component/banner';
-
-// import Nav from '../component/nav';
-// import Banner from '../component/banner'; 
 import Row from '../component/row';
 import requests from '../request';
 

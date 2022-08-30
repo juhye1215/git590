@@ -1,5 +1,7 @@
+@import "../variable.scss";
+
 .movie__list {
-    padding: 1rem 2em;
+    padding: calc($base-padding*5) calc($base-padding*4);
 
         .list__title {
         font-size: 2rem;

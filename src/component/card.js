@@ -35,8 +35,6 @@ function Card({movie}) {
                     <div className="runtime">
                         {movie?movie.release_date:""}
                     </div>
-                    {/* <div className="description">{movie ? movie.overview.slice(0,118)+"..." : ""}
-                    </div> */}
                 </div>
             </div>
         </Link>

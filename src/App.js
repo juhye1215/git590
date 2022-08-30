@@ -9,6 +9,7 @@ import Home from './page/home';
 import Nav from './component/nav';
 import MovieDetail from './page/movieDetail';
 import MovieList from './component/movieList';
+import Footer from './component/footer';
 
  
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <Route path="/*" element={<h3>This page does not existed, Please try again</h3>}></Route>
 </Routes>
 
+<Footer/>
 
 
   </div>

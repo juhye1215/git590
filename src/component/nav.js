@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import MovieList from './movieList';
 
 import "./nav.scss";
 
@@ -20,16 +19,36 @@ function Nav() {
   }, [ ]);
 
   return (
-    <div className={`nav ${show && "nav_black"}`}>
-        <div className='nav-left'>
-            <Link to="/" className='logo'><img  src='https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg'  alt='netflix logo'/>
-            </Link>
-            <Link to ="/movies/popular">Popular</Link>
-            <Link to ="/movies/top_rated">Top50</Link>
-            <Link to ="/movies/upcoming">Upcoming</Link>
-          </div>
-          <Link to="/"><img className='avatar' src=' https://mir-s3-cdn-cf.behance.net/project_modules/disp/366be133850498.56ba69ac36858.png'  alt='avatar'/></Link>
+
+
+<nav className={`navbar navbar-expand-md fixed-top  ${show && "nav_black"}`} >
+  <div className="container-fluid">
+    <Link to="/" className='navbar-brand'>
+      <img src='https://seeklogo.com/images/P/Popcorn-logo-B0FCB82BF8-seeklogo.com.png'/>
+       <p>by ASU GIT</p>
+    </Link>
+        <button className="navbar-toggler btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link to ="/movies/popular" className="nav-link">Popular</Link>
+        </li>
+        <li className="nav-item">
+          <Link to ="/movies/top_rated" className='nav-link'>Top50</Link>
+        </li>
+        <li className="nav-item">
+          <Link to ="/movies/upcoming" className='nav-link'>Upcoming</Link>
+        </li>
+
+      </ul>
     </div>
+  </div>
+</nav>
+
+
+
   )
 }
 
