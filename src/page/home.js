@@ -53,7 +53,7 @@ function Home() {
 
 </div>
 
-<Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow={true}/>
+<Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals}/>
 <Row title="Popular Movies" fetchUrl={requests.fetchTrending}/>
 <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}/>
 <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>

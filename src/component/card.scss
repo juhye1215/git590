@@ -13,15 +13,26 @@
     margin: calc($base-margin*2);
     cursor:pointer;
     min-width:200px;
-    height:300px;
     z-index:0;
     box-sizing: border-box;
     img{
-        height: 300px;
+        height: 300px;   
+        border-radius: 10px;
+
+         @include breakpoint (medium){
+            height: 350px;
+        }    
+        @include breakpoint (small){
+            height: 450px;
+        }  
+        @include breakpoint (x-small){
+            width: 100%;
+        }     
     }
+
     &:hover{
         transform: scale(1.2);
-        z-index: 1000;
+        z-index:99;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
     .overlay {
