@@ -42,16 +42,13 @@ function Home() {
               </div>
             <div className='poster-overlay'>
                <div className='poster_title'>{main? main.original_title: ""}</div>
-              <div className='poster_runtime'> {main? main.release_date : ""} </div>
+              <div className='poster_date'> {main? main.release_date : ""} </div>
               <div className='poster_description'>{main?main.overview: "" } </div>
             </div>
            </Link>
           ))
          }
 </Carousel>
-
-{/* <MovieList/> */}
-
 </div>
 
 <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals}/>

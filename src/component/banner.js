@@ -3,7 +3,6 @@ import  {useState, useEffect}from 'react';
 import axios from '../axios';
 import requests from '../request';
 
-import "./nav.scss";
 import './banner.scss';
 
 function Banner() {

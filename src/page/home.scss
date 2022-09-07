@@ -7,6 +7,10 @@
         width: 100%;
         min-height: 35rem;
         object-fit: fill;
+        @include breakpoint (small){
+            min-height: 80vh;
+            object-fit: cover;
+       }
     }
 
 }
@@ -34,16 +38,18 @@
         margin-bottom: calc($base-padding*5);
         text-align: left;
         @include breakpoint (small){
-                text-align: center;
+             text-align: center;
+             font-size: 3rem;
         }
 
     }
-    .poster_runtime{
+    .poster_date{
         font-size: $font-size-xlarge;
         margin-bottom: calc($base-padding*2);
         text-align: left;
         @include breakpoint (small){
             text-align: center;
+            font-size: $font-size-regular;
     }
 
  }
