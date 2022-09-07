@@ -31,6 +31,7 @@ function Home() {
       transitionTime={5}
       infiniteLoop={true}
       showArrows={true}
+      swipeable={true}
       >
 
          {
