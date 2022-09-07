@@ -11,16 +11,16 @@
     }
     .movie__backdrop {
         width: 100%;
-        height: 55vh;
+        height: 40vh;
         object-fit:cover;
         @include breakpoint (x-small){
-            height: 20vh;
+            height: 25vh;
         }
         @include breakpoint (small){
-            height: 35vh;
+            height: 30vh;
         }
         @include breakpoint (medium){
-            height: 40vh;
+            height: 35vh;
         }
     }
     .movie__detail {
