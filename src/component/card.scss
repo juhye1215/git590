@@ -16,14 +16,11 @@
     z-index:0;
     box-sizing: border-box;
     img{
-        height: 300px;   
+        height: 50vh;   
         border-radius: 10px;
 
-         @include breakpoint (medium){
-            height: 350px;
-        }    
         @include breakpoint (small){
-            height: 450px;
+            height: 40vh;
         }  
         @include breakpoint (x-small){
             width: 100%;

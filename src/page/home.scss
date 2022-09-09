@@ -2,13 +2,11 @@
 
 .poster-img{
     img{
-        margin: 0 auto;
         display: block;
         width: 100%;
-        min-height: 35rem;
         object-fit: fill;
+        height: 95vh;
         @include breakpoint (small){
-            min-height: 80vh;
             object-fit: cover;
        }
     }
