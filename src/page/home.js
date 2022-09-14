@@ -51,7 +51,7 @@ function Home() {
 </Carousel>
 </div>
 
-<Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals}/>
+<Row title="Originals Series" fetchUrl={requests.fetchNetflixOriginals}/>
 <Row title="Popular Movies" fetchUrl={requests.fetchTrending}/>
 <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}/>
 <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>
