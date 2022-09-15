@@ -25,7 +25,7 @@ function Nav() {
   <div className="container-fluid">
     <Link to="/" className='navbar-brand'>
       <img src='https://seeklogo.com/images/P/Popcorn-logo-B0FCB82BF8-seeklogo.com.png'/>
-       <p>by ASU Student</p>
+       <p>by ASU GIT Project</p>
     </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon "></span>

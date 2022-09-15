@@ -37,9 +37,10 @@
       }
     }
     .movie__img {
+        width: 35%;
         margin-right: calc($base-margin*10);
         margin-bottom: calc($base-margin*10);
-        max-width: 40rem;
+
         @include breakpoint (small){
             margin-right: 0;
             max-width: none;
@@ -59,6 +60,7 @@
 
 
 .movie__detailRight {
+    width: 65%;
     color: $font-white;
     display: flex;
     flex-direction: column;
