@@ -105,12 +105,12 @@ function MovieDetail() {
                 <div className="d-flex justify-content-end">
                 {
                     movieDetail && movieDetail.homepage && 
-                   <a href={movieDetail.homepage} target="_blank" type="button" class="btn btn-success" >Homepage <i className="fas fa-external-link-alt p-2"></i>
+                   <a href={movieDetail.homepage} target="_blank"  class="btn btn-success text-dark" >Homepage <i className="fas fa-external-link-alt p-2"></i>
                   </a>
                 }
                 {
                     movieDetail && movieDetail.imdb_id && 
-                  <a href={"https://www.imdb.com/title/" + movieDetail.imdb_id} target="_blank" type="button" className="btn btn-warning" >IMDb<i className="fas fa-external-link-alt p-2"></i>
+                  <a href={"https://www.imdb.com/title/" + movieDetail.imdb_id} target="_blank"className="btn btn-warning" >IMDb<i className="fas fa-external-link-alt p-2"></i>
                 </a>
                 }
                 </div>
