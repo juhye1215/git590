@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 import "./row.scss";
 
 function Row({title, fetchUrl, isLargeRow}) {
-  const base_url= "https://image.tmdb.org/t/p/original/";
   const [movies, setMovies]= useState([]);
-
 
     useEffect(() => {
         
@@ -32,7 +30,7 @@ function Row({title, fetchUrl, isLargeRow}) {
         <Link to={`/movie/${list.id}`} className="cards_link">
           <div className='main-cards'>
            <img key={i} 
-             src={`${base_url}${list.backdrop_path }`} 
+             src={"https://image.tmdb.org/t/p/original" + list.backdrop_path} 
              alt={list.name} />
                  <div className="overlay">
                     <div className="title">{list?list.original_title:""}{list?list.name:""}</div>

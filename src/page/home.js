@@ -30,14 +30,14 @@ function Home() {
       transitionTime={5}
       infiniteLoop={true}
       showArrows={true}
-      swipeable={true}
+      showThumbs={false}
       >
 
          {
           popularMovies.map((main,i) => (
             <Link to={`/movie/${main.id}`} key={i}>
               <div className='poster-img'>
-                  <img src={ `https://image.tmdb.org/t/p/original${main.backdrop_path}`}/>
+                  <img src={"https://image.tmdb.org/t/p/original" + main.backdrop_path} />
               </div>
             <div className='poster-overlay'>
                <div className='poster_title'>{main? main.original_title: ""}</div>
