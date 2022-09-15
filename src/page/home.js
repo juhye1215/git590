@@ -13,6 +13,7 @@ function Home() {
  const APIKEY = "946a058191022432f7e85fe3211cc9fb";
 
   useEffect(() => {
+
       fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIKEY}&language=en-US`)
       .then(res => res.json())
       .then(data => setPopularMovies(data.results))
@@ -37,7 +38,7 @@ function Home() {
           popularMovies.map((main,i) => (
             <Link to={`/movie/${main.id}`} key={i}>
               <div className='poster-img'>
-                  <img src={"https://image.tmdb.org/t/p/original" + main.backdrop_path} />
+                  <img src={`https://image.tmdb.org/t/p/original${main?main.backdrop_path:""}`} />
               </div>
             <div className='poster-overlay'>
                <div className='poster_title'>{main? main.original_title: ""}</div>
