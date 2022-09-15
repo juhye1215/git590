@@ -1,11 +1,13 @@
 @import "../variable.scss";
 
 .poster-img{
+    margin-bottom: 2rem;
+    
     img{
         display: block;
         width: 100%;
         object-fit: fill;
-        height: 95vh;
+        height: 90vh;
         @include breakpoint (small){
             object-fit: cover;
        }
