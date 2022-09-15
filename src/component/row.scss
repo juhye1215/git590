@@ -12,10 +12,14 @@
     .posters {
         overflow: hidden;
         white-space: nowrap;
+        overflow-x: scroll;
         padding: calc($base-padding*2) 0;
         ::-webkit-scrollbar{
             display: none !important;
         }
+       ::-webkit-scrollbar-track {
+        background: transparent;
+       }
    
      .cards_link{
             text-decoration: none;
