@@ -2,7 +2,7 @@
 
 
 .row{
-    margin: calc($base-padding*4) 0;
+    margin: calc($base-padding*3) 0;
     
     h2{
         color: $font-white;
@@ -14,12 +14,12 @@
         white-space: nowrap;
         overflow-x: scroll;
         padding: calc($base-padding*2) 0;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+
         ::-webkit-scrollbar{
             display: none !important;
         }
-       ::-webkit-scrollbar-track {
-        background: transparent;
-       }
    
      .cards_link{
             text-decoration: none;
