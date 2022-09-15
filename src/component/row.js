@@ -42,11 +42,9 @@ function Row({title, fetchUrl, isLargeRow}) {
             </SkeletonTheme>
         </div> 
         :
-        <Link to={`/movie/${list.id}`} className="cards_link">
+        <Link to={`/movie/${list.id}`} className="cards_link" key={i} >
           <div className='main-cards'>
-           <img key={i} 
-             src={"https://image.tmdb.org/t/p/original" + list.backdrop_path} 
-             alt={list.name} />
+             <img src={`https://image.tmdb.org/t/p/original${list?list.backdrop_path:""}`} alt={list.name} />
                  <div className="overlay">
                     <div className="title">{list?list.original_title:""}{list?list.name:""}</div>
                     <div className="runtime">
