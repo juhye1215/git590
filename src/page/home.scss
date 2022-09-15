@@ -2,12 +2,12 @@
 
 .poster-img{
     margin-bottom: 2rem;
-    
+
     img{
         display: block;
         width: 100%;
         object-fit: fill;
-        height: 90vh;
+        height: 85vh;
         @include breakpoint (small){
             object-fit: cover;
        }
@@ -20,6 +20,7 @@
     position: absolute;
     padding: calc($base-padding*10) calc($base-padding*6);
     bottom: 0;
+    margin-bottom: 2rem;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -64,6 +65,14 @@
             width: 100%;
     }
 
-    }
+ }
 
 } 
+
+.down-link{
+    color: $font-white;
+    font-size: $font-size-xlarge;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid red;
+}

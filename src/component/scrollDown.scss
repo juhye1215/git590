@@ -1,0 +1,25 @@
+@import "../variable.scss";
+
+.down-btn{
+    background-color: transparent;
+    width: 100%;
+    border:none;
+    margin-top: calc($base-padding*5);
+
+    .fas{
+        color:$font-white;
+        font-size: calc($font-size-regular*2);
+        font-weight: 800;
+
+        transform: translateY(-10%);
+        animation: floater 2s infinite;
+        transition: ease 0.5s;
+        height:75px;
+    }
+}
+
+@keyframes floater {
+    0%{transform: translateY(-10%);transition: ease-in-out 0.5s;}
+    50%{transform: translateY(10%);transition: ease-in-out 0.5s;}
+  }
+  

@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
+
 /**component */
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import "./home.scss";
 import Row from '../component/row';
 import requests from '../request';
+import ScrollButton from '../component/scrollDown';
+
+
 
 function Home() {
 
@@ -18,7 +22,6 @@ function Home() {
       .then(res => res.json())
       .then(data => setPopularMovies(data.results))
   }, [])
-
 
 
   return (
@@ -51,12 +54,14 @@ function Home() {
 </Carousel>
 </div>
 
-<Row title="Originals Series" fetchUrl={requests.fetchNetflixOriginals}/>
-<Row title="Popular Movies" fetchUrl={requests.fetchTrending}/>
+<ScrollButton/>
+
+<Row title="Originals Series"  fetchUrl={requests.fetchNetflixOriginals}/>
+<Row title="Popular Movies" id="popular" fetchUrl={requests.fetchTrending}/>
 <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries}/> 
-<Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies}/>
+<Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
 <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>
-    </>
+</>
   )
 }
 
