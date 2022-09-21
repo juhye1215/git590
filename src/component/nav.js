@@ -36,12 +36,11 @@ function Nav() {
           <Link to ="/movies/popular" className="nav-link">Popular</Link>
         </li>
         <li className="nav-item">
-          <Link to ="/movies/top_rated" className='nav-link'>Top50</Link>
+          <Link to ="/movies/top_rated" className='nav-link'>Top Rated</Link>
         </li>
         <li className="nav-item">
           <Link to ="/movies/upcoming" className='nav-link'>Upcoming</Link>
         </li>
-
       </ul>
     </div>
   </div>

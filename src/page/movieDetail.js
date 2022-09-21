@@ -23,6 +23,7 @@ function MovieDetail() {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKEY}&language=en-US`)
         .then(res => res.json())
         .then(data => setMovie(data))
+        console.log(setMovie);
     }
 
 
@@ -62,10 +63,10 @@ function MovieDetail() {
 
                 <div className="movie__detailRight">
                     <div className="movie__detailRightTop">
-                        <h1>{movieDetail ? movieDetail.original_title : ""}</h1>
+                        <h1>{movieDetail ? movieDetail.title : ""}{movieDetail ? movieDetail.name : ""}</h1>
                         <p>{movieDetail ? movieDetail.tagline : ""}</p>
                         <p className="rating">
-                            {movieDetail ? movieDetail.vote_average: ""} <i class="fas fa-star" />
+                            {movieDetail ? movieDetail.vote_average: ""} <i className="fas fa-star" />
                             <span className="voteCount">{movieDetail ? "(" + movieDetail.vote_count + ") votes" : ""}</span>
                         </p>  
                         <p className="movie__runtime">{movieDetail ? movieDetail.runtime + " mins" : ""}</p>

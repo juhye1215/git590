@@ -6,13 +6,9 @@
     img{
         display: block;
         width: 100%;
-        object-fit: fill;
+        object-fit:cover;
         height: 85vh;
-        @include breakpoint (small){
-            object-fit: cover;
-       }
     }
-
 }
 
 .poster-overlay{
@@ -34,13 +30,17 @@
         opacity: 1;
     }
     .poster_title{
-        font-weight: 900;
+        font-family: $title-font;
+        font-weight: 800;
         font-size: 4rem;
         margin-bottom: calc($base-padding*5);
         text-align: left;
+        width: 75%;
+
         @include breakpoint (small){
              text-align: center;
              font-size: 3rem;
+             width: 100%;
         }
 
     }
@@ -55,12 +55,20 @@
 
  }
     .poster_description{
-        font-size: $font-size-regular;
+        font-size: $font-size-large;
         margin-bottom: calc($base-padding*2);
         display: flex;
         text-align: left;
         width: 60%;
         font-family: $regular-font;
+        font-weight: 400;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+                line-clamp: 3; 
+        -webkit-box-orient: vertical;
+        color: rgb(164, 164, 164);
         @include breakpoint (small){
             width: 100%;
     }

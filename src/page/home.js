@@ -1,4 +1,4 @@
-import React, { useState, useEffect , useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 
@@ -44,7 +44,7 @@ function Home() {
                   <img src={`https://image.tmdb.org/t/p/original${main?main.backdrop_path:""}`} />
               </div>
             <div className='poster-overlay'>
-               <div className='poster_title'>{main? main.original_title: ""}</div>
+               <div className='poster_title'>{main? main.title: ""}</div>
               <div className='poster_date'> {main? main.release_date : ""} </div>
               <div className='poster_description'>{main?main.overview: "" } </div>
             </div>
@@ -56,11 +56,12 @@ function Home() {
 
 <ScrollButton/>
 
-<Row title="Originals Series"  fetchUrl={requests.fetchNetflixOriginals}/>
-<Row title="Popular Movies" id="popular" fetchUrl={requests.fetchTrending}/>
-<Row title="Documentaries" fetchUrl={requests.fetchDocumentaries}/> 
+<Row title="New Movies" fetchUrl={requests.fetchNewMovies}/>
+<Row title="Awarded Movies" fetchUrl={requests.fetchAwardedMovies}/>
+<Row title="Animation" fetchUrl={requests.fetchKidsMovies}/> 
+<Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
 <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-<Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>
+
 </>
   )
 }

@@ -1,25 +1,11 @@
 /**Fonts*/
-@font-face {
-    font-family: 'Oswald', sans-serif;
-    font-display: block;
-    src: url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-    font-style: normal;
-    font-display: swap
-  }
 
-  @font-face {
-    font-family: 'Work Sans', sans-serif;
-    font-display: block;
-    src:url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
-    font-style: normal;
-    font-display: swap
-  }
-  
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Poppins:wght@500;700;800;900&display=swap');
 
 $font-white: #ffffff;
 $font-black:#252525;
-$title-font: 'Oswald', sans-serif;
-$regular-font:'Work Sans', sans-serif;
+$title-font: 'Poppins', sans-serif;
+$regular-font: 'Open Sans', sans-serif;
 
 $font-size-small:0.75rem;
 $font-size-regular:1rem;

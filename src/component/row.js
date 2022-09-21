@@ -5,7 +5,8 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 import "./row.scss";
 
-function Row({title, fetchUrl, isLargeRow}) {
+function Row({title, fetchUrl}) {
+
   const [movies, setMovies]= useState([]);
   const [isLoading, setIsLoading] = useState(true);
   
@@ -13,15 +14,16 @@ function Row({title, fetchUrl, isLargeRow}) {
 
       setTimeout( ()=>{
         setIsLoading(false);
-    }, 1500)
+    }, 5000)
         
-        async function fetchData() {
-            const request = await axios.get(fetchUrl);
-            setMovies(request.data.results);
-            // return request;
-        }
-        fetchData();        
-    }, [fetchUrl])
+    async function fetchData() {
+        const request = await axios.get(fetchUrl);
+        setMovies(request.data.results);
+        console.log(request.data.results);
+        return request;
+    }
+    fetchData();        
+}, [fetchUrl])
 
 
   return (
@@ -38,18 +40,18 @@ function Row({title, fetchUrl, isLargeRow}) {
         ?
         <div className="cards">
             <SkeletonTheme>
-                <Skeleton height={300} duration={2} />
+                <Skeleton height={300} duration={5} />
             </SkeletonTheme>
         </div> 
         :
-        <Link to={`/movie/${list.id}`} className="cards_link" key={i} >
-          <div className='main-cards'>
+        <Link to={`/movie/${list.id}`} className="cards_link" >
+          <div className='main-cards' key={i} >
              <img src={`https://image.tmdb.org/t/p/original${list?list.backdrop_path:""}`} alt={list.name} />
                  <div className="overlay">
-                    <div className="title">{list?list.original_title:""}{list?list.name:""}</div>
-                    <div className="runtime">
-                        {list?list.release_date:""}
-                    </div>
+                    <h5 className="title">{list?list.title:""}{list?list.name:""}</h5>
+                    <p className="runtime">
+                        {list?list.release_date:""}  {list?list.first_air_date:""}
+                    </p>
                 </div>
               </div>
            </Link>

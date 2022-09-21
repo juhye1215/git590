@@ -31,10 +31,15 @@ function Card({movie}) {
             <div className="cards">
                 <img className="cards__img" src={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`} />
                 <div className="overlay">
-                    <div className="title">{movie?movie.original_title:""}</div>
-                    <div className="runtime">
+                    <h3 className="title">{movie?movie.title:""}{movie?movie.name:""}</h3>
+                    <div className="date">
                         {movie?movie.release_date:""}
+                         <span className='rating'>
+                           <i className="fas fa-star p-1" /> 
+                            {movie?movie.vote_average: ""}
+                        </span>
                     </div>
+            
                 </div>
             </div>
         </Link>
