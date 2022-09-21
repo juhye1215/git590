@@ -14,13 +14,7 @@ const request ={
 
     fetchAwardedMovies: `/discover/movie?api_key=${APIKEY}&sort_by=vote_count.desc`,
 
-    fetchNetflixOriginals: `/discover/tv?api_key=${APIKEY}&with_networks=213`,
-
-    fetchTopRated: `/movie/top-rated?api_key=${APIKEY}&language=en-US`,
-
     fetchActionMovies: `/discover/movie?api_key=${APIKEY}&with_genres=28`,
-
-
 
 }
 

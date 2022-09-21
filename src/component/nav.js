@@ -41,6 +41,9 @@ function Nav() {
         <li className="nav-item">
           <Link to ="/movies/upcoming" className='nav-link'>Upcoming</Link>
         </li>
+        <li className="nav-item">
+          <Link to ="/movies/now_playing" className='nav-link'>Now Playing</Link>
+        </li>
       </ul>
     </div>
   </div>

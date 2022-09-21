@@ -61,7 +61,6 @@ function Home() {
 <Row title="Animation" fetchUrl={requests.fetchKidsMovies}/> 
 <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
 <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-
 </>
   )
 }
