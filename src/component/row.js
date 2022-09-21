@@ -9,21 +9,39 @@ function Row({title, fetchUrl}) {
 
   const [movies, setMovies]= useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+ const fetchData = async ()=>{
+    try{
+        const response = await axios.request(fetchUrl);
+        // return the whole response object instead of only the data.
+        // this helps in error handling in the component
+        return response;
+    }
+    catch(error){}
+   }
   
     useEffect(() => {
 
       setTimeout( ()=>{
         setIsLoading(false);
-    }, 5000)
+    }, 1500)
+
+    fetchData().then(res=>{
+      setMovies(res.data.results);
+      console.log(res.data.results);
+    })
+  },[])
+
+
         
-    async function fetchData() {
-        const request = await axios.get(fetchUrl);
-        setMovies(request.data.results);
-        console.log(request.data.results);
-        return request;
-    }
-    fetchData();        
-}, [fetchUrl])
+//     async function fetchData() {
+//         const request = await axios.get(fetchUrl);
+//         setMovies(request.data.results);
+//         console.log(request.data.results);
+//         return request;
+//     }
+//     fetchData();        
+// }, [fetchUrl])
 
 
   return (
@@ -40,7 +58,7 @@ function Row({title, fetchUrl}) {
         ?
         <div className="cards">
             <SkeletonTheme>
-                <Skeleton height={300} duration={5} />
+                <Skeleton height={300} duration={2} />
             </SkeletonTheme>
         </div> 
         :

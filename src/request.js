@@ -1,6 +1,6 @@
 const APIKEY = "946a058191022432f7e85fe3211cc9fb";
 
-const requests ={
+const response ={
 
     fetchNewMovies: `/discover/movie?api_key=${APIKEY}&primary_release_year=2022&sort_by=popularity.desc&language=en-US`,
 
@@ -24,4 +24,4 @@ const requests ={
 
 }
 
-export default requests;
+export default response;
