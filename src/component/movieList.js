@@ -7,15 +7,11 @@ import './moiveList.scss';
 function MovieList() {
 
     const APIKEY = "946a058191022432f7e85fe3211cc9fb";
-    const [movieList, setMovieList] = useState([])
-    const {type} = useParams()
+    const [movieList, setMovieList] = useState([]);
+    const {type} = useParams();
 
     useEffect(() => {
-        getData()
-    }, [])
-
-    useEffect(() => {
-        getData()
+        getData();
     }, [type])
 
     const getData = () => {

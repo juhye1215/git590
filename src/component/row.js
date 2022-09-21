@@ -9,39 +9,27 @@ function Row({title, fetchUrl}) {
 
   const [movies, setMovies]= useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
- const fetchData = async ()=>{
-    try{
-        const response = await axios.request(fetchUrl);
-        // return the whole response object instead of only the data.
-        // this helps in error handling in the component
-        return response;
-    }
-    catch(error){}
-   }
   
     useEffect(() => {
 
       setTimeout( ()=>{
         setIsLoading(false);
     }, 1500)
-
-    fetchData().then(res=>{
-      setMovies(res.data.results);
-      console.log(res.data.results);
-    })
-  },[])
-
-
         
-//     async function fetchData() {
-//         const request = await axios.get(fetchUrl);
-//         setMovies(request.data.results);
-//         console.log(request.data.results);
-//         return request;
-//     }
-//     fetchData();        
-// }, [fetchUrl])
+
+    async function fetchData() {
+        const request = await axios.get(fetchUrl);
+
+if(fetchUrl.delayed){
+  return new Promise(resolve => 
+     setTimeout(()=> resolve(fetchUrl),1000 ));
+}
+        setMovies(request.data.results);
+        console.log(request.data.results);
+        return request;
+    }
+    fetchData();        
+}, [fetchUrl])
 
 
   return (
@@ -53,7 +41,7 @@ function Row({title, fetchUrl}) {
     movies.map((list,i)=> {
         return(
        <>
-           {
+  {
         isLoading
         ?
         <div className="cards">
