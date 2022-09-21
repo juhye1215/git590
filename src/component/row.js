@@ -14,16 +14,16 @@ function Row({title, fetchUrl}) {
 
       setTimeout( ()=>{
         setIsLoading(false);
-    }, 1500)
+    }, 5000)
         
 
     async function fetchData() {
         const request = await axios.get(fetchUrl);
 
-if(fetchUrl.delayed){
-  return new Promise(resolve => 
-     setTimeout(()=> resolve(fetchUrl),1000 ));
-}
+        if(fetchUrl.delayed){
+          return new Promise(resolve => 
+            setTimeout(()=> resolve,5000 ));
+        }
         setMovies(request.data.results);
         console.log(request.data.results);
         return request;
@@ -46,7 +46,7 @@ if(fetchUrl.delayed){
         ?
         <div className="cards">
             <SkeletonTheme>
-                <Skeleton height={300} duration={2} />
+                <Skeleton height={300} duration={2} count={5} />
             </SkeletonTheme>
         </div> 
         :
