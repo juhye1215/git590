@@ -8,6 +8,12 @@
         color: $font-white;
         font-family: $title-font;
         font-weight: 600;
+   
+        span{
+            color: grey;
+            font-size: $font-size-large;
+            vertical-align: bottom;
+        }
     }
 
     .posters {

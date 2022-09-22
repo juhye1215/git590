@@ -27,7 +27,7 @@ const ScrollButton = () =>{
     return ( 
       <button className='btn down-btn' onClick={scrollToBottom}  
       style={{display: visible ? 'inline' : 'none'}} > 
-        <i className="fas fa-arrow-down"></i>
+        <i className="fas fa-angle-down"></i>
       </button> 
     ); 
   } 
