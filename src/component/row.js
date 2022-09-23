@@ -45,7 +45,14 @@ function Row({title, fetchUrl}) {
 
         <Link to={`/movie/${list.id}`} className="cards_link" >
           <div className='main-cards' key={i} >
-             <img src={`https://image.tmdb.org/t/p/original${list?list.backdrop_path:""}`  || <Skeleton/> } alt={list.name} />
+            {isLoading  ?
+              <SkeletonTheme >
+                <Skeleton/>
+              </SkeletonTheme>
+            :
+             <img src={`https://image.tmdb.org/t/p/original${list?list.backdrop_path:""}` } alt={list.name} />
+            }
+
                  <div className="overlay">
                     <h5 className="title">
                       {list?list.title:""  ||  list?list.name:"" }

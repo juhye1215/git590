@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route} from 'react-router-dom';
-import  { SkeletonTheme } from "react-loading-skeleton";
 
 /**css */
 import './App.css';
@@ -17,8 +16,6 @@ import Footer from './component/footer';
 function App() {
   return (
 <div className="App">
-
-<SkeletonTheme >
   
 <Nav/>
 
@@ -30,8 +27,6 @@ function App() {
 </Routes>
 
 <Footer/>
-
-</SkeletonTheme>  
   </div>
   );
 }
