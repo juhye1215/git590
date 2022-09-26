@@ -14,7 +14,7 @@ function Row({title, fetchUrl}) {
 
       setTimeout( ()=>{
         setIsLoading(false);
-    }, 9000)
+    }, 8000)
         
 
     async function fetchData() {
@@ -46,7 +46,7 @@ function Row({title, fetchUrl}) {
                 <Skeleton/>
               </SkeletonTheme>
             :
-             <img src={`https://image.tmdb.org/t/p/original${list?list.backdrop_path:""}` } alt={list.name} />
+             <img src={`https://image.tmdb.org/t/p/original${list?list.backdrop_path:"" || list?list.poster_path:""}` } alt={list.name} />
             }
 
                  <div className="overlay">
