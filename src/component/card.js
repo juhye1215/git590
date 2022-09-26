@@ -13,7 +13,7 @@ function Card({movie}) {
     useEffect( () => {
         setTimeout( ()=>{
             setIsLoading(false);
-        }, 1500)
+        }, 3000)
     }, [])
 
   return (
@@ -21,17 +21,15 @@ function Card({movie}) {
     {
         isLoading
         ?
-        <div className="cards">
-            <SkeletonTheme>
-                <Skeleton height={300} duration={2} />
-            </SkeletonTheme>
-        </div> 
+        <SkeletonTheme>
+            <Skeleton />
+        </SkeletonTheme>
         :
         <Link to={`/movie/${movie.id}`} className="cards_link">
             <div className="cards">
                 <img className="cards__img" src={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`} />
                 <div className="overlay">
-                    <h3 className="title">{movie?movie.title:""}{movie?movie.name:""}</h3>
+                    <h3 className="title">{movie?movie.title:"" || movie?movie.name:"" }</h3>
                     <div className="date">
                         {movie?movie.release_date:""}
                          <span className='rating'>

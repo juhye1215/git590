@@ -14,16 +14,12 @@ function Row({title, fetchUrl}) {
 
       setTimeout( ()=>{
         setIsLoading(false);
-    }, 7000)
+    }, 9000)
         
 
     async function fetchData() {
         const request = await axios.get(fetchUrl);
 
-        // if(fetchUrl.delayed){
-        //   return new Promise(resolve => 
-        //     setTimeout(()=> resolve,7000 ));
-        // }
         setMovies(request.data.results);
      //   console.log(request.data.results);
         return request;
