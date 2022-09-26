@@ -6,15 +6,15 @@ const request ={
 
     fetchKidsMovies: `/discover/movie?&api_key=${APIKEY}&with_genres=16&primary_release_year=2022&sort_by=popularity.desc`,
 
-    fetchRomanceMovies: `/discover/movie?api_key=${APIKEY}&with_genres=10749`,
+    fetchRomanceMovies: `/discover/movie?api_key=${APIKEY}&with_genres=10749&language=en-US`,
 
-    fetchHorrorMovies: `/discover/movie?api_key=${APIKEY}&with_genres=27`,
+    fetchHorrorMovies: `/discover/movie?api_key=${APIKEY}&with_genres=27&language=en-US`,
 
-    fetchComedyMovies: `/discover/movie?api_key=${APIKEY}&with_genres=35`,
+    fetchComedyMovies: `/discover/movie?api_key=${APIKEY}&with_genres=35&language=en-US`,
 
     fetchAwardedMovies: `/discover/movie?api_key=${APIKEY}&sort_by=vote_count.desc`,
 
-    fetchActionMovies: `/discover/movie?api_key=${APIKEY}&with_genres=28`,
+    fetchActionMovies: `/discover/movie?api_key=${APIKEY}&with_genres=28&language=en-US`,
 
 }
 
