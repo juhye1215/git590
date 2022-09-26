@@ -59,7 +59,7 @@ function Home() {
 <Row title="New Movies" fetchUrl={requests.fetchNewMovies}/>
 <Row title="Awarded Movies" fetchUrl={requests.fetchAwardedMovies}/>
 <Row title="Animation" fetchUrl={requests.fetchKidsMovies}/> 
-{/* <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} /> */}
+<Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
 <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
 </>
   )
