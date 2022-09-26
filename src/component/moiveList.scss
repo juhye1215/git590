@@ -11,6 +11,9 @@
         }
         .list__cards {
             display: flex;
+            display: -ms-flex;
+            display: -webkit-flex;
+            display: -moz-flex;
             flex-wrap: wrap ;
             justify-content: center;
         }

@@ -12,13 +12,12 @@
     overflow: hidden;
     margin: calc($base-margin*2);
     cursor:pointer;
-    min-width:200px;
     z-index:0;
     box-sizing: border-box;
     img{
         height: 50vh;   
         border-radius: 10px;
-        width: 100%;
+        width: auto;
 
         @include breakpoint (small){
             height: 40vh;
