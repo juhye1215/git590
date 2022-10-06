@@ -15,7 +15,7 @@ function MovieList() {
     }, [type])
 
     const getData = () => {
-        fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=${APIKEY}&language=en-US`)
+        fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=${APIKEY}&language=en-US&with_original_language=en&region=US`)
         .then(res => res.json())
         .then(data => setMovieList(data.results))
     }
